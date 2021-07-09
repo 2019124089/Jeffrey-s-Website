@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<!-- Linking css stylesheet -->
+	<html lang="en" class="notranslate" translate="no">
+	<head><title>Home</title></head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, notranslate">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- styles for the entire webpage -->
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+		body, html {
+		  height: 100%;
+		  color: #777;
+		  line-height: 1.8;
+		}
+
+		.w3-wide {letter-spacing: 10px;}
+		.w3-hover-opacity {cursor: pointer;}
+
+		.footerh{
+			font-size: 18px;
+			font-family: "Playfair Display";
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+
+		.footerp{
+			font-size: 16px;
+			font-family: "Playfair Display";
+			font-weight: lighter;
+			letter-spacing: 1px;
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+
+		.footerc{
+		  font-size: 13px;
+		  font-family: "Playfair Display";
+		  font-weight: lighter;
+		  padding-top: 100px;
+		  padding-bottom: 25px;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<!-- Navigation bar at the top of the webpage -->
+		<div class="top-nav">
+			<div class="top-bar" id="navbar">
+				<a class="top-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+				<i class="fa fa-bars"></i>
+				</a>
+				<a class="top-item">JEFFREY AMIRUL</a>
+				<a style="float:right" href="contact.html" class="top-item w3-button w3-hide-small"></i> CONTACT</a>
+				<a style="float:right" href="acknowledgement.html" class="top-item w3-button w3-hide-small"></i> ACKNOWLEDGEMENT</a>
+				<a style="float:right" href="about.html" class="top-item w3-button w3-hide-small"></i> ABOUT</a>
+				<a style="float:right" href="home.html" class="top-item w3-button w3-hide-small">HOME</a>
+			</div>
+
+			<!-- Change the navigation bar into a smaller form, when the browser is not in full window mode -->
+			<div id="navDemo" class="top-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+				<a href="home.html" class="top-item w3-button" onclick="toggleFunction()">HOME</a>
+				<a href="about.html" class="top-item w3-button" onclick="toggleFunction()">ABOUT</a>
+				<a href="contact.html" class="top-item w3-button" onclick="toggleFunction()">CONTACT</a>
+				<a href="acknowledgement.html" class="top-item w3-button" onclick="toggleFunction()">ACKNOWLEDGEMENT</a>
+			</div>
+		</div>
+
+		<!-- Container (Title) -->
+		<div class="w3-content w3-container w3-padding-64" id="about">
+		  <h1 class="w3-center"><b>Welcome to My Website</b></h3>
+		  <div class="w3-row">
+			<div class="w3-col m6 w3-center w3-padding-large"><br>
+			  <img src="profile.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+			</div>
+
+			<!-- Hide this text on small devices -->
+			<div class="w3-col m6 w3-hide-small w3-padding-large"><br><br><br>
+			  <h1><center><i>“Intelligence plus character-that is the goal of true education.”</i><br><b>– Martin Luther King Jr.</b></center></h1>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Container (Gallery Section) -->
+		<div class="w3-content w3-container w3-padding-64  w3-center" id="gallery">
+		  <h3 class="w3-center">MY GALLERY</h3>
+		  
+			<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+				<div class="w3-row-padding w3-center">
+					<div class="w3-col m3">
+						<img src="img1.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Giving a Tazkirah in front of an audience">
+					</div>
+					<div class="w3-col m3">
+						<img src="img2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Awarded with the Dean's List">
+					</div>
+					<div class="w3-col m3">
+						<img src="img3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Paying close attention in class">
+					</div>
+					<div class="w3-col m3">
+						<img src="img4.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Educational visit to Pejabat Mufti Wilayah Persekutuan">
+					</div>
+				</div>
+		</div>
+
+		<!-- Modal for full size images on click-->
+		<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+		  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+		  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+			<img id="img01" class="w3-image">
+			<p id="caption" class="w3-opacity w3-large"></p>
+		  </div>
+		</div>
+
+		<hr>
+
+		<!-- Footer -->
+		<footer>
+			<div>
+				<div style="float:left;"><br> 
+					<p class="footerh">Phone</p>
+					<p class="footerp">+603-5544 2000</p>
+				</div>
+				<div style="float:right;"><br>
+					<p class="footerh">Email<p>
+					<p class="footerp">webmeadia@uitm.edu.my</p>
+				</div>
+				<div style="text-align:center;">
+					<p class="footerc">© 2021 by Muhammad Jeffrey Amirul bin Zulkifly (2019124089).</p>
+				</div>
+			</div>
+		</footer>
+ 
+		<script>
+		// Modal Image Gallery
+		function onClick(element) {
+		  document.getElementById("img01").src = element.src;
+		  document.getElementById("modal01").style.display = "block";
+		  var captionText = document.getElementById("caption");
+		  captionText.innerHTML = element.alt;
+		}
+
+		// Change style of navbar on scroll
+		window.onscroll = function() {myFunction()};
+		function myFunction() {
+			var navbar = document.getElementById("navbar");
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				navbar.className = "top-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+			} else {
+				navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+			}
+		}
+
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function toggleFunction() {
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+		</script>
+
+	</body>
+</html>

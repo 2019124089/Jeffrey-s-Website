@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<!-- Linking css stylesheet -->
+	<html lang="en" class="notranslate" translate="no">
+	<head><title>Acknowledgement</title></head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, notranslate">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- styles for the entire webpage -->
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+		body, html {
+		  height: 100%;
+		  color: #777;
+		  line-height: 1.8;
+		}
+
+		.w3-wide {letter-spacing: 10px;}
+		.w3-hover-opacity {cursor: pointer;}
+
+		.footerh{
+			font-size: 18px;
+			font-family: "Playfair Display";
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+
+		.footerp{
+			font-size: 16px;
+			font-family: "Playfair Display";
+			font-weight: lighter;
+			letter-spacing: 1px;
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+
+		.footerc{
+		  font-size: 13px;
+		  font-family: "Playfair Display";
+		  font-weight: lighter;
+		  padding-top: 100px;
+		  padding-bottom: 25px;
+			text-align: center;
+		}
+	</style>
+	
+	<body>
+		<!-- Navigation bar at the top of the webpage -->
+		<div class="top-nav">
+		  <div class="top-bar" id="navbar">
+			<a class="top-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+			  <i class="fa fa-bars"></i>
+			</a>
+			<a class="top-item">JEFFREY AMIRUL</a>
+			<a style="float:right" href="contact.html" class="top-item w3-button w3-hide-small"></i> CONTACT</a>
+			<a style="float:right" href="acknowledgement.html" class="top-item w3-button w3-hide-small"></i> ACKNOWLEDGEMENT</a>
+			<a style="float:right" href="about.html" class="top-item w3-button w3-hide-small"></i> ABOUT</a>
+			<a style="float:right" href="home.html" class="top-item w3-button w3-hide-small">HOME</a>
+		  </div>
+
+		  <!-- Change the navigation bar into a smaller form, when the browser is not in full window mode -->
+		  <div id="navDemo" class="top-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+			<a href="home.html" class="top-item w3-button" onclick="toggleFunction()">HOME</a>
+			<a href="about.html" class="top-item w3-button" onclick="toggleFunction()">ABOUT</a>
+			<a href="contact.html" class="top-item w3-button" onclick="toggleFunction()">CONTACT</a>
+			<a href="acknowledgement.html" class="top-item w3-button" onclick="toggleFunction()">ACKNOWLEDGEMENT</a>
+		  </div>
+		</div>
+
+		<!-- Container (Acknowledgement Section) -->
+		<div class="w3-content w3-container w3-padding-64 img-container" style="text-align: center;" id="acknowledgement"><br><br>
+		  <h3 class="w3-center">ACKNOWLEDGEMENT</h3><br>
+		  <p class="w3-center">First and foremost, alhamdulillah, praise be to Allah Almighty, the Beneficent and the Merciful,
+		  and peace be upon Him of the glorious visit of the prophet Muhammad SAW. Thanks to the
+		  Divine wish for His grace, I managed to finalise and complete my individual assignment.
+		  As the completion of this noteworthy endeavor, I would like to express my greatest gratitude to
+		  the remarkable Madam Razifah Othman for coughing up excellent advice and directions
+		  throughout numerous consultations. The door to Madam Razifah’s proficiency was and is
+		  always open whenever I ran into a trouble spot or had a question regarding my tasks. I am on
+		  cloud nine as she consistently observes my steady progress and wellbeing even with our
+		  geographical differences due to the novelty of online learning. Without her persistent assistance
+		  and dedicated involvement in every step throughout the process of my Introduction to Web
+		  Content Management and Design (IMD 311) voyage, this assignment would have never been
+		  accomplished rigorously.</p><br>
+		  <p>In the fullness of time, I must express my very profound gratitude to both of my parents and to
+		  all those who have directly and indirectly guided me in completing this assignment especially my
+		  classmates that have made countless constructive comments and genuine suggestions on my
+		  work which gave me the inspiration to improve the quality of this assignment.
+		  All the best for your post-graduate Madam!</p><br>
+		  <img src="uitm.jpg" alt="UiTM Logo"><br><br><br><br><br><br>
+		</div>
+
+	<hr>
+
+		<!-- Footer -->
+		<footer>
+			<div>
+				<div style="float:left;">
+				 <br> 
+				 <p class="footerh">Phone</p>
+				 <p class="footerp">+603-5544 2000</p>
+				</div>
+				<div style="float:right;">
+				<br>
+				 <p class="footerh">Email<p>
+				 <p class="footerp">webmeadia@uitm.edu.my</p>
+				</div>
+			   <div style="text-align:center;">
+				 <p class="footerc">© 2021 by Muhammad Jeffrey Amirul bin Zulkifly (2019124089).</p>
+			   </div>
+			</div>
+		</footer>
+	 
+		<script>
+			// Change style of navbar on scroll
+			window.onscroll = function() {myFunction()};
+			function myFunction() {
+				var navbar = document.getElementById("navbar");
+				if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+					navbar.className = "top-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+				} else {
+					navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+				}
+			}
+
+			// Used to toggle the menu on small screens when clicking on the menu button
+			function toggleFunction() {
+				var x = document.getElementById("navDemo");
+				if (x.className.indexOf("w3-show") == -1) {
+					x.className += " w3-show";
+				} else {
+					x.className = x.className.replace(" w3-show", "");
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="notranslate, width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Gallery</title>
+</head>
+
+<style>
+	body {
+	font-family: "Times New Roman", Georgia, Serif;}
+	h1, h2, h3, h4, h5, h6 {
+  	font-family: "Playfair Display";
+  	letter-spacing: 5px;
+	}
+
+</style>
+
+<body>
+<!-- navigation bar-->
+		<div class ="w3-top">
+			<div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+				<a href="home.html"  class="w3-bar-item w3-button"> Jeffrey Amirul</a>
+				<!-- Right-sided navbar links to hide them on small screens -->
+				<div class="w3-right w3-hide-small">
+					<a href="about.html"  class="w3-bar-item w3-button">About</a>
+					<a href="gallery.html"  class="w3-bar-item w3-button"> Gallery </a>
+					<a href=""  class="w3-bar-item w3-button">Contact</a>
+					<a href="acknowledgement.html"  class="w3-bar-item w3-button">Acknowledgement</a> 
+				</div>
+			</div>
+
+	<!-- Container (Gallery Section) -->
+	<div class ="w3-content w3-container w3-padding-64" id="portfolio">
+		<h3 class= "w3-center">Gallery</h3>
+
+	<!--Responsive Grid. Four columns on tablets, laptop and desktops. Will stack on mobile devices/small screens (100%width)-->
+	<div class ="w3-row-padding w3-center">
+		<div class="w3-col m3">
+			<img src="img1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spending my pastime reading National Geographic.">
+   		 </div>
+
+    	<div class="w3-col m3">
+     		 <img src="img2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Receiving my Diploma Certificate.">
+   		 </div>
+
+   		 <div class="w3-col m3">
+     		 <img src="img3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Focusing in class.">
+   		 </div>
+   		</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+<!-- Footer -->
+<footer>
+	 <div>
+	 <span style="float:left;">
+	<h3>Phone</h3>
+      <p>+603-5544 2000</p>
+	  </span>
+    </div>
+	
+	 <div>
+	<span style="float:right;">
+	<h3>Email<h3>  
+	<p>webmedia@uitm.edu.my</p>
+	</span>
+	</div>
+</footer>
+
+
+</body>
+</html>
